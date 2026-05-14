@@ -1,0 +1,267 @@
+[
+  {
+    "id": "two-step-screaming",
+    "title": "ツーステップ☆スクリーミング (デモ音源)",
+    "year": 2024,
+    "cover": "img/albums/twoStepScreaming.png",
+    "songs": [
+      {
+        "title": "ツーステップ☆スクリーミング (ほほ美 ver.)",
+        "translation": "Two-Step☆Screaming (Hohomi ver.)"
+      },
+      {
+        "title": "ツーステップ☆スクリーミング (AYARI ver.)",
+        "translation": "Two-Step☆Screaming (AYARI ver.)"
+      },
+      {
+        "title": "ツーステップ☆スクリーミング (REOTO ver,)",
+        "translation": "Two-Step☆Screaming (REOTO ver.)"
+      },
+      {
+        "title": "ツーステップ☆スクリーミング (YONA ver.)",
+        "translation": "Two-Step☆Screaming (YONA ver.)"
+      }
+    ]
+  },
+  {
+    "id": "aquarium-acoustic-ver",
+    "title": "水槽にて (acoustic ver.)",
+    "year": 2024,
+    "cover": "img/albums/acquariumAcoustic.png",
+    "isSingle": true,
+    "songs": [
+      {
+        "title": "水槽にて (acoustic ver.)",
+        "translation": "At the Aquarium (acoustic ver.)"
+      }
+    ]
+  },
+  {
+    "id": "5c1767-yona",
+    "title": "#5C1767 (YONA オリジナル音源)",
+    "year": 2024,
+    "cover": "img/albums/yona.png",
+    "isSingle": true,
+    "songs": [
+      {
+        "title": "#5C1767"
+      }
+    ]
+  },
+  {
+    "id": "panorama",
+    "title": "PANORAMA",
+    "year": 2023,
+    "cover": "img/albums/panorama.png",
+    "songs": [
+      {
+        "title": "PANORAMA"
+      },
+      {
+        "title": "誰",
+        "translation": "Who"
+      },
+      {
+        "title": "ギルガメシュ闘争記",
+        "translation": "The Epic of Gilgamesh"
+      }
+    ]
+  },
+  {
+    "id": "schizoid",
+    "title": "スキゾイド",
+    "year": 2023,
+    "cover": "img/albums/schizoid.png",
+    "songs": [
+      {
+        "title": "スキゾイド",
+        "translation": "Schizoid"
+      },
+      {
+        "title": "Virtual Rebellion"
+      },
+      {
+        "title": "水槽にて",
+        "translation": "At the Aquarium"
+      }
+    ]
+  },
+  {
+    "id": "octave",
+    "title": "ØCTAVE",
+    "year": 2024,
+    "cover": "img/albums/octave.png",
+    "songs": [
+      {
+        "title": "PANORAMA"
+      },
+      {
+        "title": "迷路 -MAZE-"
+      },
+      {
+        "title": "幻想曲第一番嬰ハ短調『旋律泥棒』",
+        "translation": "Fantasia No. 1 in C-sharp Minor: \"Melody Stealer\""
+      },
+      {
+        "title": "独占エレジー",
+        "translation": "Monopoly Elegy"
+      },
+      {
+        "title": "スキゾイド",
+        "translation": "Schizoid"
+      },
+      {
+        "title": "水槽にて",
+        "translation": "At the Aquarium"
+      },
+      {
+        "title": "Moment."
+      }
+    ]
+  },
+  {
+    "id": "reoto",
+    "title": "レオトノオト (REOTO オリジナル音源)",
+    "year": 2024,
+    "cover": "img/albums/reoto.png",
+    "isSingle": true,
+    "songs": [
+      {
+        "title": "Sea of Glass"
+      },
+      {
+        "title": "小さな詩書きへ",
+        "translation": "To a Young Poet"
+      }
+    ]
+  },
+  {
+    "id": "sc-re",
+    "title": "SCØRE",
+    "year": 2024,
+    "cover": "img/albums/score.jpg",
+    "songs": [
+      {
+        "title": "アレグロ",
+        "translation": "Allegro"
+      },
+      {
+        "title": "Virtual Rebellion (Album Mix)"
+      },
+      {
+        "title": "凍蝶の哭",
+        "translation": "The Cry of the Frozen Butterfly"
+      },
+      {
+        "title": "aLiVE (Album Mix)"
+      },
+      {
+        "title": "不眠飛行 (Bonus Track)",
+        "translation": "Sleepless Flight (Bonus Track)"
+      },
+      {
+        "title": "七月七日",
+        "translation": "July 7"
+      },
+      {
+        "title": "コスモ心中",
+        "translation": "Cosmo Double Suicide"
+      },
+      {
+        "title": "in Gloria Dei"
+      },
+      {
+        "title": "盲導歌",
+        "translation": "Song of the Guide"
+      },
+      {
+        "title": "CRAZY & NOiSY & CUTiE MAGiC！"
+      }
+    ]
+  },
+  {
+    "id": "raison-d-etre",
+    "title": "Raison d'etre",
+    "year": 2025,
+    "cover": "img/albums/raisondetre.png",
+    "songs": [
+      {
+        "title": "Raison d'etre"
+      },
+      {
+        "title": "余命一日。",
+        "translation": "One Day Left to Live"
+      },
+      {
+        "title": "ツーステップ☆スクリーミング",
+        "translation": "Two-Step☆Screaming"
+      }
+    ]
+  },
+  {
+    "id": "fortissim",
+    "title": "FORTISSIMØ【通常盤】",
+    "year": 2025,
+    "cover": "img/albums/fortissimo.jpg",
+    "songs": [
+      {
+        "title": "f -フォルテ-",
+        "translation": "f-forte"
+      },
+      {
+        "title": "GOOD LACK"
+      },
+      {
+        "title": "Crowd Surf Rider"
+      },
+      {
+        "title": "Rain Bright"
+      },
+      {
+        "title": "誰 (Album Version)",
+        "translation": "Who (Album Version)"
+      },
+      {
+        "title": "Echo"
+      },
+      {
+        "title": "ギルガメシュ闘争記 (Album Version)",
+        "translation": "The Epic of Gilgamesh (Album Version)"
+      },
+      {
+        "title": "組曲『死者の書』 - Ⅰ. Descent to Abyss",
+        "translation": "Suite: The Book of the Dead - Ⅰ. Descent to Abyss"
+      },
+      {
+        "title": "組曲『死者の書』 - Ⅱ. Judgment",
+        "translation": "Suite: The Book of the Dead - Ⅱ. Judgment"
+      },
+      {
+        "title": "組曲『死者の書』 - Ⅲ. Crucifixion",
+        "translation": "Suite: The Book of the Dead - Ⅲ. Crucifixion"
+      },
+      {
+        "title": "組曲『死者の書』 - Ⅳ. Reincarnation",
+        "translation": "Suite: The Book of the Dead - Ⅳ. Reincarnation"
+
+      }
+    ]
+  },
+  {
+    "id": "unison",
+    "title": "UNISØN【通常盤】",
+    "year": 2026,
+    "cover": "img/albums/unison.jpg",
+    "songs": [
+      {
+        "title": "Prologue"
+      },
+      {
+        "title": "Chocolat Maudit"
+      },
+      {
+        "title": "Starlight Voyage"
+      }
+    ]
+  }
+]

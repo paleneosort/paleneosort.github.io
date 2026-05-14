@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'"
+    />
+    <title>PaleNeØ Song Sorter</title>
+    <meta name="description" content="Sort songs from PaleNeØ head-to-head until a final ranking emerges." />
+
+    <!-- Open Graph / Discord, Slack, Facebook, etc. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PaleNeØ Song Sorter" />
+    <meta property="og:title" content="PaleNeØ Song Sorter" />
+    <meta property="og:description" content="Sort songs from PaleNeØ head-to-head until a final ranking emerges." />
+    <meta property="og:url" content="https://paleneosort.github.io/" />
+    <meta property="og:image" content="https://paleneosort.github.io/img/bandphoto.png" />
+    <meta property="og:image:width" content="640" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:alt" content="PaleNeØ, band photo" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PaleNeØ Song Sorter" />
+    <meta name="twitter:description" content="Sort songs from PaleNeØ head-to-head until a final ranking emerges." />
+    <meta name="twitter:image" content="https://paleneosort.github.io/img/bandphoto.png" />
+
+    <!-- Sets the colored bar on Discord embeds. Kept in sync with --accent in style.css
+         by scripts/set-accent.mjs, change the accent there, both update together. -->
+    <meta name="theme-color" content="#9c2539" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  </head>
+  <body>
+    <main>
+      <section id="phase-select" class="phase">
+        <div class="phase-header">
+          <div class="phase-header__text">
+            <h1 class="phase__title">PaleNeØ Song Sorter</h1>
+            <p class="phase__intro">Pick the albums you want included, then sort songs head-to-head until a final ranking emerges.</p>
+            <p class="phase__note">Duplicate songs will be ignored</p>
+          </div>
+          <a class="official-link" href="https://paleneo.bitfan.id/" rel="noopener" target="_blank">
+            <img src="img/bandlogo.jpg" alt="" class="official-link__logo" />
+            <span class="official-link__label">Official Site</span>
+            <span class="official-link__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="albums-header">
+          <h2 class="phase__heading">Albums</h2>
+          <div class="albums-header__actions">
+            <button type="button" id="selectAll" class="btn btn--ghost btn--small">Deselect all</button>
+            <div id="sortToggle" class="view-toggle" role="group" aria-label="Sort albums by date">
+              <button type="button" data-sort="asc" class="view-toggle__btn" aria-pressed="false">Oldest first</button>
+              <button type="button" data-sort="desc" class="view-toggle__btn is-active" aria-pressed="true">Newest first</button>
+            </div>
+          </div>
+        </div>
+        <div id="albumGrid" class="albums"></div>
+
+        <div class="select-actions">
+          <span class="select-actions__count" id="selectionCount"></span>
+          <button type="button" id="startBtn" class="btn btn--primary">Start Sorting →</button>
+        </div>
+      </section>
+
+      <section id="phase-sort" class="phase" hidden>
+        <div class="progress">
+          <div class="progress__stats">
+            <span>Battle <strong id="battle">,</strong></span>
+            <span><strong id="progressPct">0</strong>% sorted</span>
+          </div>
+          <progress id="progressBar" value="0" max="100"></progress>
+        </div>
+        <p class="prompt">Which song do you prefer?</p>
+        <div class="cards">
+          <button id="leftCard" type="button" class="card"></button>
+          <div class="cards__middle">
+            <button id="tieBtn" type="button" class="btn btn--ghost">Tie!</button>
+            <button id="undoBtn" type="button" class="btn btn--ghost">Undo last</button>
+            <button id="restartSortBtn" type="button" class="btn btn--ghost btn--small">Restart</button>
+          </div>
+          <button id="rightCard" type="button" class="card"></button>
+        </div>
+      </section>
+
+      <section id="phase-results" class="phase" hidden>
+        <div class="results-toolbar">
+          <div class="view-toggle" role="group" aria-label="Result view">
+            <button type="button" data-view="detailed" class="view-toggle__btn is-active" aria-pressed="true">Detailed</button>
+            <button type="button" data-view="compact" class="view-toggle__btn" aria-pressed="false">Compact</button>
+          </div>
+        </div>
+
+        <div id="resultsCard" class="results-card" data-view="detailed">
+          <header class="results-card__header">
+            <h2 class="results-card__title">My PaleNeØ Song Ranking</h2>
+            <p class="results-card__subtitle">paleneo.bitfan.id · paleneosort.github.io</p>
+          </header>
+          <div id="podium" class="podium"></div>
+          <ol id="resultsList" class="results-grid"></ol>
+        </div>
+
+        <div class="results-actions">
+          <button type="button" id="rawTextBtn" class="btn btn--ghost">Copy as text</button>
+          <button type="button" id="exportImgBtn" class="btn btn--ghost">Export as image</button>
+          <button type="button" id="restartBtn" class="btn btn--primary">Sort Again</button>
+        </div>
+        <p class="results-attribution">
+          Make your own sorter at <a href="https://github.com/mstie/band-sorter-template" rel="noopener" target="_blank">https://github.com/mstie/band-sorter-template</a>
+        </p>
+      </section>
+    </main>
+
+    <dialog id="rawDialog" class="dialog">
+      <h2 class="dialog__title">Raw Text Results</h2>
+      <textarea id="rawText" class="dialog__text" readonly rows="20"></textarea>
+      <div class="dialog__actions">
+        <button type="button" id="copyBtn" class="btn btn--primary">Copy</button>
+        <button type="button" id="closeDialogBtn" class="btn btn--ghost">Close</button>
+      </div>
+    </dialog>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
