@@ -11,4 +11,4 @@ Required files at this directory's root:
 | `favicon.png`          | 32×32                 | Browser tab icon                                     |
 | `apple-touch-icon.png` | 144×144               | iOS home-screen icon                                 |
 
-Album covers go in `img/albums/`. 600×600 square is recommended
+Album covers go in `img/albums/`. 360×360 square is recommended
