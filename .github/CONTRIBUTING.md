@@ -27,8 +27,8 @@ The site uses ES modules, which require an HTTP server (won't work via `file://`
 When adding new cover art or photos, target these dimensions. The site already displays at much smaller sizes, so larger sources just waste bandwidth.
 
 | Image                        | Recommended                                | Reason                                                                                                      |
-| ---------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+|------------------------------| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
 | Album covers                 | 600×600                                    | Largest on-page display is the 240px battle card; 600px gives 2× retina headroom. ~70KB after mozjpeg q=85. |
-| Band photo (`bandphoto.jpg`) | 1200×1200 or 1200×630                      | Used as the `og:image` for Discord / Twitter / Slack embeds. Only loaded when someone shares the URL.       |
+| Band photo (`bandphoto.png`) | 1200×1200 or 1200×630                      | Used as the `og:image` for Discord / Twitter / Slack embeds. Only loaded when someone shares the URL.       |
 | Logo (`bandlogo.png`)        | ~500×500                                   | Displayed at 44px in the page header; retina-2x is 88px, so anything above ~200px is plenty.                |
 | Favicon                      | 32×32 PNG + 144×144 `apple-touch-icon.png` | Standard browser tab and iOS home-screen sizes.                                                             |
